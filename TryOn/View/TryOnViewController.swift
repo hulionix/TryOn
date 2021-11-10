@@ -8,13 +8,17 @@
 import UIKit
 import ARKit
 
-class TryOnViewController: UIViewController {
+class TryOnViewController: UIViewController, ARSessionDelegate {
+    
+    var tryOnView: TryOnView!
     
     /// Load the AppView
     override func loadView() {
         let view = TryOnView()
         self.view = view
+        self.tryOnView = view
         view.backgroundColor = .blue
+        ARSessionDelegate
     }
 
     override func viewDidLoad() {
@@ -26,10 +30,10 @@ class TryOnViewController: UIViewController {
     }
     
     func setSession() {
-        guard ARFaceTrackingConfiguration.isSupported , let view = self.view as? ARSCNView else { return }
+        guard ARFaceTrackingConfiguration.isSupported else { return }
         let configuration = ARFaceTrackingConfiguration()
         configuration.isLightEstimationEnabled = true
-        view.session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
+        tryOnView.session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
     }
 }
 
