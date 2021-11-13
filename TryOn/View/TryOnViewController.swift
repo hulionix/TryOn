@@ -8,7 +8,7 @@
 import UIKit
 import ARKit
 
-class TryOnViewController: UIViewController, ARSessionDelegate {
+class TryOnViewController: UIViewController {
     
     var tryOnView: TryOnView!
     

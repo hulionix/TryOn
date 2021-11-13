@@ -11,6 +11,7 @@ import UIKit
 class AppAssembler {
     // Register app single instances
     let fileManagerAdapter = FileManagerAdapter()
+    let presenter = EyewearModelPresenter()
     // END app single instances
     
     func resolve() -> NetworkLoader {
@@ -32,11 +33,13 @@ class AppAssembler {
     }
     
     func resolve() -> GetEyewearModel {
-        GetEyewearModel(requester: resolve())
+        GetEyewearModel(requester: resolve(), output: self.presenter)
     }
     
     func resolve() -> UIViewController {
         let viewController = TryOnViewController(getEyewearModel: resolve())
+        // Completing the view -> interactor -> presenter -> view cycle. RecipesPresenter.view is a weak var to prevent the reference cycle and allow RecipesViewController to deallocate.
+        presenter.view = viewController
         return viewController
     }
 }

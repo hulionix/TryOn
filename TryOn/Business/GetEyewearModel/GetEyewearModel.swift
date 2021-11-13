@@ -13,8 +13,11 @@ class GetEyewearModel: EyewearModelRequesterDelegate {
     /// Requests the eyewear model
     private var requester: EyewearModelRequester
     
-    init(requester: EyewearModelRequester) {
+    private let output: GetEyewearModelOutput
+    
+    init(requester: EyewearModelRequester, output: GetEyewearModelOutput) {
         self.requester = requester
+        self.output = output
         self.requester.delegate = self
     }
     
@@ -25,16 +28,16 @@ class GetEyewearModel: EyewearModelRequesterDelegate {
     
     /// Called when the requested model becomes available
     func requester(didReceiveEyewearModel model: EyewearModel) {
-        
+        self.output.present(eyewearModel: model)
     }
     
     /// Called with a value indicating request loading progress
     func requester(didReceiveProgress progress: RequestProgress) {
-        print(progress.value)
+        self.output.update(progress: progress)
     }
     
     /// Called whenever the request produces an error
     func requester(failedWithError error: RequestError) {
-        
+        self.output.failedWith(error: error)
     }
 }
