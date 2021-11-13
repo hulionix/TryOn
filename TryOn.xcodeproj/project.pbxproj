@@ -20,6 +20,19 @@
 		ED15312D273BDF2B0089945A /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = ED15312C273BDF2B0089945A /* Alamofire */; };
 		ED153130273BDF3D0089945A /* ZipArchive in Frameworks */ = {isa = PBXBuildFile; productRef = ED15312F273BDF3D0089945A /* ZipArchive */; };
 		ED153133273BDF630089945A /* GLTFSceneKit in Frameworks */ = {isa = PBXBuildFile; productRef = ED153132273BDF630089945A /* GLTFSceneKit */; };
+		ED153136273BDFCE0089945A /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED153135273BDFCE0089945A /* Networking.swift */; };
+		ED15313C273BE29E0089945A /* NetworkingConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED15313B273BE29E0089945A /* NetworkingConfig.swift */; };
+		ED153140273BE3490089945A /* AFNetworkAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED15313F273BE3490089945A /* AFNetworkAdapter.swift */; };
+		ED153145273BE6F80089945A /* GetEyewearModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED153144273BE6F80089945A /* GetEyewearModel.swift */; };
+		ED153147273BE71D0089945A /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED153146273BE71D0089945A /* AppConfig.swift */; };
+		ED153149273BE8490089945A /* EyewearModelRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED153148273BE8490089945A /* EyewearModelRequest.swift */; };
+		ED15314C273C37B20089945A /* EyewearModelNetworkRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED15314B273C37B20089945A /* EyewearModelNetworkRequester.swift */; };
+		ED153153273D7BD00089945A /* FileReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED153152273D7BD00089945A /* FileReader.swift */; };
+		ED153157273FF2E90089945A /* EyewearModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED153156273FF2E90089945A /* EyewearModel.swift */; };
+		ED153159273FFCA70089945A /* Unarchiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED153158273FFCA70089945A /* Unarchiver.swift */; };
+		ED15315C2740092F0089945A /* ZipArchiveAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED15315B2740092F0089945A /* ZipArchiveAdapter.swift */; };
+		ED15315F27400A2A0089945A /* FileManagerAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED15315E27400A2A0089945A /* FileManagerAdapter.swift */; };
+		ED15316327403CCD0089945A /* EyewearModelNetworkRequesterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED15316227403CCD0089945A /* EyewearModelNetworkRequesterTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +67,19 @@
 		ED15310F273BBAC60089945A /* TryOnUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TryOnUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		ED15311D273BBB060089945A /* AppAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAssembler.swift; sourceTree = "<group>"; };
 		ED153120273BBE670089945A /* TryOnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TryOnView.swift; sourceTree = "<group>"; };
+		ED153135273BDFCE0089945A /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		ED15313B273BE29E0089945A /* NetworkingConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingConfig.swift; sourceTree = "<group>"; };
+		ED15313F273BE3490089945A /* AFNetworkAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AFNetworkAdapter.swift; sourceTree = "<group>"; };
+		ED153144273BE6F80089945A /* GetEyewearModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetEyewearModel.swift; sourceTree = "<group>"; };
+		ED153146273BE71D0089945A /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
+		ED153148273BE8490089945A /* EyewearModelRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyewearModelRequest.swift; sourceTree = "<group>"; };
+		ED15314B273C37B20089945A /* EyewearModelNetworkRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyewearModelNetworkRequester.swift; sourceTree = "<group>"; };
+		ED153152273D7BD00089945A /* FileReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileReader.swift; sourceTree = "<group>"; };
+		ED153156273FF2E90089945A /* EyewearModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyewearModel.swift; sourceTree = "<group>"; };
+		ED153158273FFCA70089945A /* Unarchiver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unarchiver.swift; sourceTree = "<group>"; };
+		ED15315B2740092F0089945A /* ZipArchiveAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZipArchiveAdapter.swift; sourceTree = "<group>"; };
+		ED15315E27400A2A0089945A /* FileManagerAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerAdapter.swift; sourceTree = "<group>"; };
+		ED15316227403CCD0089945A /* EyewearModelNetworkRequesterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyewearModelNetworkRequesterTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +135,9 @@
 			children = (
 				ED1530FA273BBAC60089945A /* Info.plist */,
 				ED15311C273BBAF70089945A /* App */,
+				ED15313D273BE3100089945A /* Services */,
+				ED153155273FF2D50089945A /* Models */,
+				ED153142273BE6B00089945A /* Business */,
 				ED15311F273BBE1E0089945A /* View */,
 			);
 			path = TryOn;
@@ -117,6 +146,7 @@
 		ED153102273BBAC60089945A /* TryOnTests */ = {
 			isa = PBXGroup;
 			children = (
+				ED15316027403CAE0089945A /* Services */,
 				ED153103273BBAC60089945A /* TryOnTests.swift */,
 			);
 			path = TryOnTests;
@@ -139,6 +169,7 @@
 				ED15311D273BBB060089945A /* AppAssembler.swift */,
 				ED1530EC273BBAC30089945A /* AppDelegate.swift */,
 				ED1530EE273BBAC30089945A /* SceneDelegate.swift */,
+				ED153146273BE71D0089945A /* AppConfig.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -150,6 +181,102 @@
 				ED153120273BBE670089945A /* TryOnView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		ED153134273BDFAE0089945A /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				ED15313B273BE29E0089945A /* NetworkingConfig.swift */,
+				ED153135273BDFCE0089945A /* Networking.swift */,
+				ED15314B273C37B20089945A /* EyewearModelNetworkRequester.swift */,
+				ED15313E273BE3310089945A /* AFNetworking */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		ED15313D273BE3100089945A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				ED153151273D7BAF0089945A /* File */,
+				ED153134273BDFAE0089945A /* Networking */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		ED15313E273BE3310089945A /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				ED15313F273BE3490089945A /* AFNetworkAdapter.swift */,
+			);
+			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+		ED153141273BE6930089945A /* GetGlassModel */ = {
+			isa = PBXGroup;
+			children = (
+				ED153144273BE6F80089945A /* GetEyewearModel.swift */,
+				ED153148273BE8490089945A /* EyewearModelRequest.swift */,
+			);
+			path = GetGlassModel;
+			sourceTree = "<group>";
+		};
+		ED153142273BE6B00089945A /* Business */ = {
+			isa = PBXGroup;
+			children = (
+				ED153141273BE6930089945A /* GetGlassModel */,
+			);
+			path = Business;
+			sourceTree = "<group>";
+		};
+		ED153151273D7BAF0089945A /* File */ = {
+			isa = PBXGroup;
+			children = (
+				ED153152273D7BD00089945A /* FileReader.swift */,
+				ED15315D27400A1F0089945A /* FileManager */,
+				ED153158273FFCA70089945A /* Unarchiver.swift */,
+				ED15315A274009250089945A /* ZipArchive */,
+			);
+			path = File;
+			sourceTree = "<group>";
+		};
+		ED153155273FF2D50089945A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				ED153156273FF2E90089945A /* EyewearModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		ED15315A274009250089945A /* ZipArchive */ = {
+			isa = PBXGroup;
+			children = (
+				ED15315B2740092F0089945A /* ZipArchiveAdapter.swift */,
+			);
+			path = ZipArchive;
+			sourceTree = "<group>";
+		};
+		ED15315D27400A1F0089945A /* FileManager */ = {
+			isa = PBXGroup;
+			children = (
+				ED15315E27400A2A0089945A /* FileManagerAdapter.swift */,
+			);
+			path = FileManager;
+			sourceTree = "<group>";
+		};
+		ED15316027403CAE0089945A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				ED15316127403CB40089945A /* Networking */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		ED15316127403CB40089945A /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				ED15316227403CCD0089945A /* EyewearModelNetworkRequesterTests.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,10 +420,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED15311E273BBB060089945A /* AppAssembler.swift in Sources */,
+				ED153147273BE71D0089945A /* AppConfig.swift in Sources */,
 				ED153121273BBE670089945A /* TryOnView.swift in Sources */,
+				ED153136273BDFCE0089945A /* Networking.swift in Sources */,
+				ED153159273FFCA70089945A /* Unarchiver.swift in Sources */,
+				ED15313C273BE29E0089945A /* NetworkingConfig.swift in Sources */,
 				ED1530F1273BBAC30089945A /* TryOnViewController.swift in Sources */,
 				ED1530ED273BBAC30089945A /* AppDelegate.swift in Sources */,
+				ED15315C2740092F0089945A /* ZipArchiveAdapter.swift in Sources */,
 				ED1530EF273BBAC30089945A /* SceneDelegate.swift in Sources */,
+				ED153149273BE8490089945A /* EyewearModelRequest.swift in Sources */,
+				ED153140273BE3490089945A /* AFNetworkAdapter.swift in Sources */,
+				ED153157273FF2E90089945A /* EyewearModel.swift in Sources */,
+				ED153153273D7BD00089945A /* FileReader.swift in Sources */,
+				ED153145273BE6F80089945A /* GetEyewearModel.swift in Sources */,
+				ED15314C273C37B20089945A /* EyewearModelNetworkRequester.swift in Sources */,
+				ED15315F27400A2A0089945A /* FileManagerAdapter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +443,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED15316327403CCD0089945A /* EyewearModelNetworkRequesterTests.swift in Sources */,
 				ED153104273BBAC60089945A /* TryOnTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -395,7 +535,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -450,7 +590,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

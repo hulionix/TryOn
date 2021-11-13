@@ -12,17 +12,28 @@ class TryOnViewController: UIViewController, ARSessionDelegate {
     
     var tryOnView: TryOnView!
     
+    let getEyewearModel: GetEyewearModel
+    
+    init(getEyewearModel: GetEyewearModel) {
+        self.getEyewearModel = getEyewearModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     /// Load the AppView
     override func loadView() {
         let view = TryOnView()
         self.view = view
         self.tryOnView = view
         view.backgroundColor = .blue
-        ARSessionDelegate
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        getEyewearModel.get()
     }
     
     override func viewDidAppear(_ animated: Bool) {

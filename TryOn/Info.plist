@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>NSCameraUsageDescription</key>
-	<string>To try out our amazing glasses, we need access to your camera for our AR experience.</string>
+	<string>To try out our amazing eyewear, we need access to your camera for our AR experience to work.</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
