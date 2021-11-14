@@ -10,6 +10,8 @@ import ARKit
 import SceneKit
 import GLTFSceneKit
 
+
+/// Scene for handling the fitting of an eyewear on a face
 class TryOnScene: SCNScene, ARSCNViewDelegate {
     
     /// Eyewear parent node

@@ -95,6 +95,7 @@ class ScreenshotView: UIView {
         }
     }
     
+    /// Create the snapshot image viewer
     func createImageDisplayView() {
         self.addSubview(self.imageDisplayView)
         if !UIAccessibility.isReduceTransparencyEnabled {
@@ -126,6 +127,7 @@ class ScreenshotView: UIView {
         self.imageView.contentMode = .scaleAspectFit
     }
     
+    /// Show the snapshot share interface
     func show(image: UIImage) {
         self.imageView.image = image
         self.imageDisplayView.alpha = 1
@@ -139,6 +141,7 @@ class ScreenshotView: UIView {
         }
     }
     
+    /// Hide the snapshot share interface
     func hideImage() {
         self.snapButton.isEnabled = true
         UIView.animate(withDuration: 0.5) {
@@ -153,6 +156,7 @@ class ScreenshotView: UIView {
         }
     }
     
+    /// Make constraints for image view
     func makeImageConstraints(make: ConstraintMaker, scale: CGFloat, top: CGFloat) {
         make.width.equalTo(self).multipliedBy(scale)
         make.height.equalTo(self).multipliedBy(scale)
