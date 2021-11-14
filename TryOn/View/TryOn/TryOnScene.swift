@@ -13,7 +13,7 @@ import GLTFSceneKit
 class TryOnScene: SCNScene, ARSCNViewDelegate {
     
     /// Eyewear parent node
-    var eyewearParentNode: SCNNode!
+    var eyewearParentNode: SCNNode
     
     /// Eyewear node
     var eyewearNode: SCNNode?
@@ -22,6 +22,7 @@ class TryOnScene: SCNScene, ARSCNViewDelegate {
     var faceMaskNode: SCNNode!
     
     override init() {
+        self.eyewearParentNode = SCNNode()
         super.init()
     }
     
@@ -42,7 +43,6 @@ class TryOnScene: SCNScene, ARSCNViewDelegate {
         //faceMaskNode.geometry?.subdivisionLevel = 2
         faceMaskNode.renderingOrder = -1
         
-        if self.eyewearParentNode == nil { self.eyewearParentNode = SCNNode() }
         self.eyewearParentNode.addChildNode(self.faceMaskNode)
         self.fitEyewearOnFace()
         return self.eyewearParentNode
@@ -60,7 +60,6 @@ class TryOnScene: SCNScene, ARSCNViewDelegate {
     
     /// Install the eyewear model on face
     func updateWith(eyewearViewsModel model: EyewearViewModel) {
-        if self.eyewearParentNode == nil { self.eyewearParentNode = SCNNode() }
         do {
             let eyewearNode = try GLTFSceneSource(url: model.url).scene().rootNode.childNodes.first
             eyewearNode?.geometry?.firstMaterial!.lightingModel = .physicallyBased

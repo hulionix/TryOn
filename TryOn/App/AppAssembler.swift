@@ -36,8 +36,13 @@ class AppAssembler {
         GetEyewearModel(requester: resolve(), output: self.presenter)
     }
     
-    func resolve() -> UIViewController {
-        let viewController = TryOnViewController(getEyewearModel: resolve())
+    func resolve() -> OverlayViewController {
+        OverlayViewController()
+    }
+    
+    func resolve() -> TryOnViewController {
+        let viewController = TryOnViewController(overlayViewController: resolve(),
+                                                 getEyewearModel: resolve())
         // Completing the view -> interactor -> presenter -> view cycle. RecipesPresenter.view is a weak var to prevent the reference cycle and allow RecipesViewController to deallocate.
         presenter.view = viewController
         return viewController

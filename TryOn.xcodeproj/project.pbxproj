@@ -41,6 +41,10 @@
 		ED1531722740921F0089945A /* EyewearViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1531712740921F0089945A /* EyewearViewModel.swift */; };
 		ED1531742740B4060089945A /* FileWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1531732740B4060089945A /* FileWriter.swift */; };
 		ED1531782740BA250089945A /* UIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1531772740BA250089945A /* UIConfig.swift */; };
+		ED15317D274129840089945A /* OverlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED15317C274129840089945A /* OverlayViewController.swift */; };
+		ED15318027412ABC0089945A /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = ED15317F27412ABC0089945A /* SnapKit */; };
+		ED153183274131850089945A /* OverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED153182274131850089945A /* OverlayView.swift */; };
+		ED153186274133590089945A /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED153185274133590089945A /* LoadingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +100,9 @@
 		ED1531712740921F0089945A /* EyewearViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyewearViewModel.swift; sourceTree = "<group>"; };
 		ED1531732740B4060089945A /* FileWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileWriter.swift; sourceTree = "<group>"; };
 		ED1531772740BA250089945A /* UIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIConfig.swift; sourceTree = "<group>"; };
+		ED15317C274129840089945A /* OverlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayViewController.swift; sourceTree = "<group>"; };
+		ED153182274131850089945A /* OverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayView.swift; sourceTree = "<group>"; };
+		ED153185274133590089945A /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +111,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED153133273BDF630089945A /* GLTFSceneKit in Frameworks */,
+				ED15318027412ABC0089945A /* SnapKit in Frameworks */,
 				ED15312D273BDF2B0089945A /* Alamofire in Frameworks */,
 				ED153130273BDF3D0089945A /* ZipArchive in Frameworks */,
 			);
@@ -195,10 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				ED1531772740BA250089945A /* UIConfig.swift */,
-				ED1530F0273BBAC30089945A /* TryOnViewController.swift */,
-				ED15316B274051AE0089945A /* TryOnViewController+EyewearModelView.swift */,
-				ED153120273BBE670089945A /* TryOnView.swift */,
-				ED15316F27406C210089945A /* TryOnScene.swift */,
+				ED153179274128550089945A /* TryOn */,
 				ED1531762740B7140089945A /* Overlay */,
 			);
 			path = View;
@@ -323,8 +328,22 @@
 		ED1531762740B7140089945A /* Overlay */ = {
 			isa = PBXGroup;
 			children = (
+				ED15317C274129840089945A /* OverlayViewController.swift */,
+				ED153182274131850089945A /* OverlayView.swift */,
+				ED153185274133590089945A /* LoadingView.swift */,
 			);
 			path = Overlay;
+			sourceTree = "<group>";
+		};
+		ED153179274128550089945A /* TryOn */ = {
+			isa = PBXGroup;
+			children = (
+				ED1530F0273BBAC30089945A /* TryOnViewController.swift */,
+				ED15316B274051AE0089945A /* TryOnViewController+EyewearModelView.swift */,
+				ED153120273BBE670089945A /* TryOnView.swift */,
+				ED15316F27406C210089945A /* TryOnScene.swift */,
+			);
+			path = TryOn;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -347,6 +366,7 @@
 				ED15312C273BDF2B0089945A /* Alamofire */,
 				ED15312F273BDF3D0089945A /* ZipArchive */,
 				ED153132273BDF630089945A /* GLTFSceneKit */,
+				ED15317F27412ABC0089945A /* SnapKit */,
 			);
 			productName = TryOn;
 			productReference = ED1530E9273BBAC30089945A /* TryOn.app */;
@@ -424,6 +444,7 @@
 				ED15312B273BDF2B0089945A /* XCRemoteSwiftPackageReference "Alamofire" */,
 				ED15312E273BDF3D0089945A /* XCRemoteSwiftPackageReference "ZipArchive" */,
 				ED153131273BDF630089945A /* XCRemoteSwiftPackageReference "GLTFSceneKit" */,
+				ED15317E27412ABC0089945A /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = ED1530EA273BBAC30089945A /* Products */;
 			projectDirPath = "";
@@ -472,10 +493,12 @@
 				ED153147273BE71D0089945A /* AppConfig.swift in Sources */,
 				ED153121273BBE670089945A /* TryOnView.swift in Sources */,
 				ED153136273BDFCE0089945A /* Networking.swift in Sources */,
+				ED153186274133590089945A /* LoadingView.swift in Sources */,
 				ED153159273FFCA70089945A /* Unarchiver.swift in Sources */,
 				ED15316627404E370089945A /* EyewearModelPresenter.swift in Sources */,
 				ED15313C273BE29E0089945A /* NetworkingConfig.swift in Sources */,
 				ED1530F1273BBAC30089945A /* TryOnViewController.swift in Sources */,
+				ED15317D274129840089945A /* OverlayViewController.swift in Sources */,
 				ED1530ED273BBAC30089945A /* AppDelegate.swift in Sources */,
 				ED15315C2740092F0089945A /* ZipArchiveAdapter.swift in Sources */,
 				ED1531782740BA250089945A /* UIConfig.swift in Sources */,
@@ -484,6 +507,7 @@
 				ED153149273BE8490089945A /* EyewearModelRequest.swift in Sources */,
 				ED153140273BE3490089945A /* AFNetworkAdapter.swift in Sources */,
 				ED15317027406C210089945A /* TryOnScene.swift in Sources */,
+				ED153183274131850089945A /* OverlayView.swift in Sources */,
 				ED153157273FF2E90089945A /* EyewearModel.swift in Sources */,
 				ED15316A27404EE90089945A /* GetEyewearModelOutput.swift in Sources */,
 				ED15316827404E630089945A /* EyewearModelView.swift in Sources */,
@@ -872,6 +896,14 @@
 				kind = branch;
 			};
 		};
+		ED15317E27412ABC0089945A /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -889,6 +921,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = ED153131273BDF630089945A /* XCRemoteSwiftPackageReference "GLTFSceneKit" */;
 			productName = GLTFSceneKit;
+		};
+		ED15317F27412ABC0089945A /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ED15317E27412ABC0089945A /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

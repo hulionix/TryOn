@@ -7,6 +7,7 @@
 
 import UIKit
 import ARKit
+import SnapKit
 
 class TryOnViewController: UIViewController, ARSCNViewDelegate {
     
@@ -16,7 +17,12 @@ class TryOnViewController: UIViewController, ARSCNViewDelegate {
     /// Use case for getting an eyewear model
     let getEyewearModel: GetEyewearModel
     
-    init(getEyewearModel: GetEyewearModel) {
+    /// View controller containing UI elements
+    let overlayViewController: OverlayViewController
+    
+    init(overlayViewController: OverlayViewController,
+         getEyewearModel: GetEyewearModel) {
+        self.overlayViewController = overlayViewController
         self.getEyewearModel = getEyewearModel
         super.init(nibName: nil, bundle: nil)
     }
@@ -30,10 +36,24 @@ class TryOnViewController: UIViewController, ARSCNViewDelegate {
         let view = TryOnView()
         self.view = view
         self.tryOnView = view
+        
+        self.overlayViewController.willMove(toParent: self)
+        self.addChild(self.overlayViewController)
+        self.view.addSubview(self.overlayViewController.view)
+        self.overlayViewController.didMove(toParent: self)
+        
+        self.overlayViewController.view.snp.makeConstraints { make in
+            make.left.right.top.bottom.equalTo(self.tryOnView)
+        }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
     }
     
     /// Set session configuration and load the model
     override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         guard
             ARFaceTrackingConfiguration.isSupported
         else { return }
@@ -41,20 +61,10 @@ class TryOnViewController: UIViewController, ARSCNViewDelegate {
         let configuration = ARFaceTrackingConfiguration()
         configuration.isLightEstimationEnabled = true
         self.tryOnView.session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
+        
         self.getEyewearModel.get()
         
         return
-        
-//        guard
-//            ARWorldTrackingConfiguration.supportsUserFaceTracking
-//        else { return }
-//        
-//        let configuration = ARWorldTrackingConfiguration()
-//        configuration.isLightEstimationEnabled = true
-//        configuration.environmentTexturing = .automatic
-//        configuration.userFaceTrackingEnabled = true
-//        configuration.wantsHDREnvironmentTextures = true
-//        self.tryOnView.session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
     }
 }
 

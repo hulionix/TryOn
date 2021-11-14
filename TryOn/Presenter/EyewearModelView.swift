@@ -6,13 +6,14 @@
 //
 
 import Foundation
+import CoreGraphics
 
 /// Protocol representing a view responsible for displaying the eyewear model
 protocol EyewearModelView: AnyObject {
     
     func show(eyewearViewModel: EyewearViewModel)
     
-    func show(loadingProgress: Double)
+    func show(loadingProgress: CGFloat)
     
     func show(error: String)
 }

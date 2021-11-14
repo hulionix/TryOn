@@ -20,7 +20,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let assembler = AppAssembler()
         self.window = UIWindow(windowScene: scene)
-        self.window?.rootViewController = assembler.resolve()
+        let rootViewController: TryOnViewController = assembler.resolve()
+        self.window?.rootViewController = rootViewController
         self.window?.makeKeyAndVisible()
     }
 }

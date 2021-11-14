@@ -18,7 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         } else {
             let assembler = AppAssembler()
             window = UIWindow( frame: UIScreen.main.bounds )
-            window?.rootViewController = assembler.resolve()
+            let rootViewController: TryOnViewController = assembler.resolve()
+            window?.rootViewController = rootViewController
             window?.makeKeyAndVisible()
         }
         

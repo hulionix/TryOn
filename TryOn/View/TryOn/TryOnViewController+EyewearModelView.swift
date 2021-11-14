@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import CoreGraphics
 
 extension TryOnViewController: EyewearModelView {
     
@@ -15,8 +16,8 @@ extension TryOnViewController: EyewearModelView {
     }
     
     /// Show loading progress
-    func show(loadingProgress: Double) {
-        print(loadingProgress)
+    func show(loadingProgress: CGFloat) {
+        self.overlayViewController.overlayView.progressView.progress = loadingProgress
     }
     
     /// Show an error

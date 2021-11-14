@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import CoreGraphics
 
 /// Responsible for updating the view with results of getting an eyewear model
 class EyewearModelPresenter: GetEyewearModelOutput {
@@ -24,7 +25,7 @@ class EyewearModelPresenter: GetEyewearModelOutput {
     
     /// Called to update loading progress
     func update(progress: RequestProgress) {
-        self.view.show(loadingProgress: progress.value)
+        self.view.show(loadingProgress: CGFloat(progress.value))
     }
     
     /// Called when requesting an eyewear model fails
