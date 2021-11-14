@@ -86,9 +86,9 @@ class TryOnScene: SCNScene, ARSCNViewDelegate {
         let fMin = face.boundingBox.min
         let fMax = face.boundingBox.max
         
-        let scale = ((fMax.x - fMin.x) / (eMax.x - eMin.x)) * 1.2
+        let scale = ((fMax.x - fMin.x) / (eMax.x - eMin.x)) * UIConfig.eyewearScaleFactor
         eyewear.scale = SCNVector3(scale, scale, scale)
-        eyewear.position.z = fMax.z - 0.02
-        eyewear.position.y += 0.02
+        eyewear.position.z = fMax.z + UIConfig.eyewearZShift
+        eyewear.position.y += UIConfig.eyewearYShift
     }
 }

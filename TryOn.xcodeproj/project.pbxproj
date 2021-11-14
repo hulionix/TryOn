@@ -40,6 +40,7 @@
 		ED15317027406C210089945A /* TryOnScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED15316F27406C210089945A /* TryOnScene.swift */; };
 		ED1531722740921F0089945A /* EyewearViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1531712740921F0089945A /* EyewearViewModel.swift */; };
 		ED1531742740B4060089945A /* FileWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1531732740B4060089945A /* FileWriter.swift */; };
+		ED1531782740BA250089945A /* UIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1531772740BA250089945A /* UIConfig.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +95,7 @@
 		ED15316F27406C210089945A /* TryOnScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TryOnScene.swift; sourceTree = "<group>"; };
 		ED1531712740921F0089945A /* EyewearViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyewearViewModel.swift; sourceTree = "<group>"; };
 		ED1531732740B4060089945A /* FileWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileWriter.swift; sourceTree = "<group>"; };
+		ED1531772740BA250089945A /* UIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIConfig.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,10 +194,12 @@
 		ED15311F273BBE1E0089945A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				ED1531772740BA250089945A /* UIConfig.swift */,
 				ED1530F0273BBAC30089945A /* TryOnViewController.swift */,
 				ED15316B274051AE0089945A /* TryOnViewController+EyewearModelView.swift */,
 				ED153120273BBE670089945A /* TryOnView.swift */,
 				ED15316F27406C210089945A /* TryOnScene.swift */,
+				ED1531762740B7140089945A /* Overlay */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -314,6 +318,13 @@
 				ED15315A274009250089945A /* ZipArchive */,
 			);
 			path = Unarchiver;
+			sourceTree = "<group>";
+		};
+		ED1531762740B7140089945A /* Overlay */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Overlay;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -467,6 +478,7 @@
 				ED1530F1273BBAC30089945A /* TryOnViewController.swift in Sources */,
 				ED1530ED273BBAC30089945A /* AppDelegate.swift in Sources */,
 				ED15315C2740092F0089945A /* ZipArchiveAdapter.swift in Sources */,
+				ED1531782740BA250089945A /* UIConfig.swift in Sources */,
 				ED1531722740921F0089945A /* EyewearViewModel.swift in Sources */,
 				ED1530EF273BBAC30089945A /* SceneDelegate.swift in Sources */,
 				ED153149273BE8490089945A /* EyewearModelRequest.swift in Sources */,
