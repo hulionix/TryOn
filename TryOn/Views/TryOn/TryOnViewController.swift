@@ -63,8 +63,6 @@ class TryOnViewController: UIViewController, ARSCNViewDelegate {
         self.tryOnView.session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
         
         self.getEyewearModel.get()
-        
-        return
     }
 }
 

@@ -8,11 +8,17 @@
 import Foundation
 import UIKit
 
+/// Overlay interface view controller
 class OverlayViewController: UIViewController {
     
+    /// View holding interface UI elements
     var overlayView: OverlayView!
     
-    init() {
+    /// Interactions writer
+    private let interactionsWriter: InteractionsWriter
+    
+    init(interactionsWriter: InteractionsWriter) {
+        self.interactionsWriter = interactionsWriter
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -21,7 +27,7 @@ class OverlayViewController: UIViewController {
     }
     
     override func loadView() {
-        let overlayView = OverlayView()
+        let overlayView = OverlayView(interactionsWriter: self.interactionsWriter)
         self.view = overlayView
         self.overlayView = overlayView
     }

@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 import SnapKit
 
-
+/// Model loading progress view
 class LoadingView: UIView {
     
     /// Label for loading message
@@ -85,8 +85,11 @@ class LoadingView: UIView {
                               y: progressBar.frame.minY,
                               width: self.frame.width * progress,
                               height: progressBar.frame.height)
-        UIView.animate(withDuration: UIConfig.progressAnimationDuration) {
+        UIView.animate(withDuration: UIConfig.progressAnimationDuration,
+                       delay: 0,
+                       options: [.beginFromCurrentState],
+                       animations: {
             self.progressBar.frame = newFrame
-        }
+        })
     }
 }

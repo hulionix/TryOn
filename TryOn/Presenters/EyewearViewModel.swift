@@ -7,6 +7,9 @@
 
 import Foundation
 
+/// Eyewear view model
 struct EyewearViewModel {
+    
+    /// URL to the file containing the 3d model data
     let url: URL
 }

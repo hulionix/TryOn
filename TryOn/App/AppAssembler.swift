@@ -11,7 +11,10 @@ import UIKit
 class AppAssembler {
     // Register app single instances
     let fileManagerAdapter = FileManagerAdapter()
-    let presenter = EyewearModelPresenter()
+    lazy var presenter = {
+        EyewearModelPresenter(interactionsReader: resolve())
+    }()
+    let interactionsManager = InteractionsManager()
     // END app single instances
     
     func resolve() -> NetworkLoader {
@@ -36,8 +39,16 @@ class AppAssembler {
         GetEyewearModel(requester: resolve(), output: self.presenter)
     }
     
+    func resolve() -> InteractionsWriter {
+        interactionsManager
+    }
+    
+    func resolve() -> InteractionsReader {
+        interactionsManager
+    }
+    
     func resolve() -> OverlayViewController {
-        OverlayViewController()
+        OverlayViewController(interactionsWriter: resolve())
     }
     
     func resolve() -> TryOnViewController {

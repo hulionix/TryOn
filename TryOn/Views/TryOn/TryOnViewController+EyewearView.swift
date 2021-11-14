@@ -8,7 +8,7 @@
 import Foundation
 import CoreGraphics
 
-extension TryOnViewController: EyewearModelView {
+extension TryOnViewController: EyewearView {
     
     /// Show an eyewear model
     func show(eyewearViewModel: EyewearViewModel) {
@@ -23,5 +23,20 @@ extension TryOnViewController: EyewearModelView {
     /// Show an error
     func show(error: String) {
         print(error)
+    }
+    
+    /// Close snapshot image viewer
+    func takeSnapshot() {
+        let image = self.tryOnView.snapshot()
+        self.overlayViewController.overlayView.screenshotView.show(image: image)
+    }
+    
+    func closeImageViewer() {
+        self.overlayViewController.overlayView.screenshotView.hideImage()
+    }
+    
+    /// Hide loading progress view
+    func hideProgressView() {
+        self.overlayViewController.overlayView.progressView.hide()
     }
 }

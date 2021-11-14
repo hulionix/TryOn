@@ -26,4 +26,8 @@ struct UIConfig {
     static let progressViewWidth: CGFloat = 250
     /// Progress view height
     static let progressViewHeight: CGFloat = 100
+    /// Overlay button radius
+    static let overlayButtonRadius: CGFloat = 35
+    /// Overlay button width
+    static let overlayButtonWidth: CGFloat = 70
 }
