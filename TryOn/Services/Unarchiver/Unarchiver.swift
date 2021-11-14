@@ -11,7 +11,7 @@ import Foundation
 protocol Unarchiver {
     
     /// Unarchives an ArchivedFile into its unarchiveDestination
-    func unarchive(file: ArchivedFile) -> Bool
+    func unarchive(file: ArchivedFile, deleteAfter: Bool) -> Bool
 }
 
 /// Data structure representing an archived file along with it's desired unarchiving destination

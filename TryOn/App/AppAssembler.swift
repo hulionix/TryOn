@@ -23,7 +23,7 @@ class AppAssembler {
     }
     
     func resolve() -> Unarchiver {
-        ZipArchiveAdapter()
+        ZipArchiveAdapter(fileWriter: fileManagerAdapter)
     }
     
     func resolve() -> EyewearModelRequester {

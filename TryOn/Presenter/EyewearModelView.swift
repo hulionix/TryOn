@@ -10,7 +10,7 @@ import Foundation
 /// Protocol representing a view responsible for displaying the eyewear model
 protocol EyewearModelView: AnyObject {
     
-    func show(eyewearModel: EyewearModel)
+    func show(eyewearViewModel: EyewearViewModel)
     
     func show(loadingProgress: Double)
     

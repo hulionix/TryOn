@@ -10,8 +10,8 @@ import Foundation
 extension TryOnViewController: EyewearModelView {
     
     /// Show an eyewear model
-    func show(eyewearModel: EyewearModel) {
-        print(eyewearModel)
+    func show(eyewearViewModel: EyewearViewModel) {
+        self.tryOnView.tryOnScene.updateWith(eyewearViewsModel: eyewearViewModel)
     }
     
     /// Show loading progress

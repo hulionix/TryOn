@@ -8,10 +8,12 @@
 import UIKit
 import ARKit
 
-class TryOnViewController: UIViewController {
+class TryOnViewController: UIViewController, ARSCNViewDelegate {
     
+    /// TryOn view
     var tryOnView: TryOnView!
     
+    /// Use case for getting an eyewear model
     let getEyewearModel: GetEyewearModel
     
     init(getEyewearModel: GetEyewearModel) {
@@ -23,28 +25,36 @@ class TryOnViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    /// Load the AppView
+    /// Load the TryOnView
     override func loadView() {
         let view = TryOnView()
         self.view = view
         self.tryOnView = view
-        view.backgroundColor = .blue
-    }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        getEyewearModel.get()
     }
     
+    /// Set session configuration and load the model
     override func viewDidAppear(_ animated: Bool) {
-        setSession()
-    }
-    
-    func setSession() {
-        guard ARFaceTrackingConfiguration.isSupported else { return }
+        guard
+            ARFaceTrackingConfiguration.isSupported
+        else { return }
+
         let configuration = ARFaceTrackingConfiguration()
         configuration.isLightEstimationEnabled = true
-        tryOnView.session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
+        self.tryOnView.session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
+        self.getEyewearModel.get()
+        
+        return
+        
+//        guard
+//            ARWorldTrackingConfiguration.supportsUserFaceTracking
+//        else { return }
+//        
+//        let configuration = ARWorldTrackingConfiguration()
+//        configuration.isLightEstimationEnabled = true
+//        configuration.environmentTexturing = .automatic
+//        configuration.userFaceTrackingEnabled = true
+//        configuration.wantsHDREnvironmentTextures = true
+//        self.tryOnView.session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
     }
 }
 

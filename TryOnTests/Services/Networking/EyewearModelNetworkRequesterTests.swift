@@ -173,7 +173,7 @@ class UnarchiverMock: Unarchiver {
     var unarchiveCalls = 0
     var shouldSucceed = true
     
-    func unarchive(file: ArchivedFile) -> Bool {
+    func unarchive(file: ArchivedFile, deleteAfter: Bool = true) -> Bool {
         unarchiveCalls += 1
         return shouldSucceed
     }

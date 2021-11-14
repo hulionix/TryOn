@@ -15,7 +15,11 @@ class EyewearModelPresenter: GetEyewearModelOutput {
     
     /// Called when an eyewear model is ready
     func present(eyewearModel: EyewearModel) {
-        self.view.show(eyewearModel: eyewearModel)
+        let file = eyewearModel.name + ".gltf"
+        let eyewearURL = eyewearModel.baseURL.appendingPathComponent(file,
+                                                                     isDirectory: false)
+        let viewModel = EyewearViewModel(url: eyewearURL)
+        self.view.show(eyewearViewModel: viewModel)
     }
     
     /// Called to update loading progress

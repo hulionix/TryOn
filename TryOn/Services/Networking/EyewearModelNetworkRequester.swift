@@ -36,7 +36,7 @@ class EyewearModelNetworkRequester: EyewearModelRequester, NetworkLoaderDelegate
         let cacheRequest = FileReadRequest(path: modelName,
                                            isDirectory: true,
                                            baseDirectory: NetworkingConfig.downloadDestination)
-        
+
         if let url = fileReader.getURLIfExists(request: cacheRequest) {
             let model = EyewearModel(name: AppConfig.demoModelName, baseURL: url)
             self.delegate?.requester(didReceiveProgress: RequestProgress(1))
@@ -66,13 +66,15 @@ class EyewearModelNetworkRequester: EyewearModelRequester, NetworkLoaderDelegate
         let extractDestination = FileURLRequest(path: nil,
                                                 isDirectory: true,
                                                 baseDirectory: NetworkingConfig.extractDestination)
-        guard let destinationURL = self.fileReader.makeURL(request: extractDestination) else {
+        guard
+            let destinationURL = self.fileReader.makeURL(request: extractDestination)
+        else {
             self.delegate?.requester(failedWithError: .couldNotProcess)
             return
         }
         
         let archivedFile = ArchivedFile(url: file.url, unarchiveDestination: destinationURL)
-        if self.unarchiver.unarchive(file: archivedFile) {
+        if self.unarchiver.unarchive(file: archivedFile, deleteAfter: true) {
             let baseURL = destinationURL.appendingPathComponent(file.fileName, isDirectory: true)
             let model = EyewearModel(name: AppConfig.demoModelName, baseURL: baseURL)
             self.delegate?.requester(didReceiveEyewearModel: model)
