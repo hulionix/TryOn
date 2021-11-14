@@ -10,7 +10,6 @@ import ARKit
 import SceneKit
 import GLTFSceneKit
 
-
 /// Scene for handling the fitting of an eyewear on a face
 class TryOnScene: SCNScene, ARSCNViewDelegate {
     
@@ -63,14 +62,32 @@ class TryOnScene: SCNScene, ARSCNViewDelegate {
     /// Install the eyewear model on face
     func updateWith(eyewearViewsModel model: EyewearViewModel) {
         do {
-            let eyewearNode = try GLTFSceneSource(url: model.url).scene().rootNode.childNodes.first
-            eyewearNode?.geometry?.firstMaterial!.lightingModel = .physicallyBased
-            eyewearNode?.castsShadow = true
-            self.eyewearParentNode.addChildNode(eyewearNode!)
-            self.eyewearNode = eyewearNode!
+            guard let eyewearNode = try GLTFSceneSource(url: model.url)
+                    .scene()
+                    .rootNode
+                    .childNodes
+                    .first
+            else { return }
+            
+            self.setMaterialFor(node: eyewearNode)
+            
+            self.eyewearParentNode.addChildNode(eyewearNode)
+            self.eyewearNode = eyewearNode
             self.fitEyewearOnFace()
         } catch {
             print("\(error.localizedDescription)")
+        }
+    }
+    
+    func setMaterialFor(node: SCNNode) {
+        node.geometry?.firstMaterial!.lightingModel = .physicallyBased
+        //node.castsShadow = true
+        
+        if node.childNodes.count == 0 {
+            return
+        }
+        node.childNodes.forEach { child in
+            self.setMaterialFor(node: child)
         }
     }
     
