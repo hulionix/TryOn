@@ -15,6 +15,9 @@ class ScreenshotView: UIView {
     /// Button for taking a screenshot
     var snapButton: UIButton!
     
+    /// Button for sharing a screenshot
+    var shareButton: UIButton!
+    
     /// Button for dismissing the screenshot view
     var closeButton: UIButton!
     
@@ -34,11 +37,16 @@ class ScreenshotView: UIView {
         self.createUI()
     }
     
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     /// Create UI elements
     func createUI() {
         self.createSnapButton()
         self.createImageDisplayView()
         self.createCloseButton()
+        self.createShareButton()
     }
     
     /// Create snap button
@@ -50,6 +58,21 @@ class ScreenshotView: UIView {
         })
         self.addSubview(self.snapButton)
         self.snapButton.snp.makeConstraints { make in
+            make.width.height.equalTo(UIConfig.overlayButtonWidth)
+            make.centerX.equalTo(self.snp.centerX)
+            make.bottom.equalTo(-40)
+        }
+    }
+    
+    /// Create share button
+    func createShareButton() {
+        self.shareButton = OverlayButton(normalImage: UIImage(named: "ShareNormal")!,
+                                        highlightedImage: UIImage(named: "ShareSelected")!,
+                                        tapped: { [weak self] in
+            self?.interactionsWriter.shareButtonTapped()
+        })
+        self.imageDisplayView.addSubview(self.shareButton)
+        self.shareButton.snp.makeConstraints { make in
             make.width.height.equalTo(UIConfig.overlayButtonWidth)
             make.centerX.equalTo(self.snp.centerX)
             make.bottom.equalTo(-40)
@@ -95,12 +118,12 @@ class ScreenshotView: UIView {
         self.imageView.snp.makeConstraints { make in
             self.makeImageConstraints(make: make, scale: 1, top: 0)
         }
-        
+        self.imageView.clipsToBounds = true
+        self.imageView.layer.shadowRadius = 20
+        self.imageView.layer.shadowColor = UIColor.black.cgColor
+        self.imageView.layer.shadowOpacity = 0.4
+        self.imageView.layer.shadowOffset = CGSize(width: 0, height: 10)
         self.imageView.contentMode = .scaleAspectFit
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
     
     func show(image: UIImage) {
@@ -111,19 +134,21 @@ class ScreenshotView: UIView {
             self.imageView.snp.remakeConstraints { make in
                 self.makeImageConstraints(make: make, scale: 0.7, top: 30)
             }
+            self.imageView.layer.cornerRadius = UIConfig.overlayButtonRadius
             self.layoutIfNeeded()
         }
     }
     
     func hideImage() {
+        self.snapButton.isEnabled = true
         UIView.animate(withDuration: 0.5) {
             self.imageView.snp.remakeConstraints { make in
                 self.makeImageConstraints(make: make, scale: 1, top: 0)
             }
             self.layoutIfNeeded()
             self.imageDisplayView.alpha = 0
+            self.imageView.layer.cornerRadius = 0
         } completion: { _ in
-            self.snapButton.isEnabled = true
             self.imageView.image = nil
         }
     }

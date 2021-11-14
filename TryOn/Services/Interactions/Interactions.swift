@@ -16,6 +16,9 @@ protocol InteractionsReader {
     
     /// Subject for close button taps
     var closeButtonTaps: AnyPublisher<(), Never> { get }
+    
+    /// Subject for share button taps
+    var shareButtonTaps: AnyPublisher<(), Never> { get }
 }
 
 /// Protocol representing an object that registers interface interactions
@@ -26,4 +29,7 @@ protocol InteractionsWriter {
     
     /// Register a close button tap
     func closeButtonTapped()
+    
+    /// Register a share button tap
+    func shareButtonTapped()
 }

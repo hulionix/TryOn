@@ -31,4 +31,14 @@ class OverlayViewController: UIViewController {
         self.view = overlayView
         self.overlayView = overlayView
     }
+    
+    func presentShareDialogue(image: UIImage) {
+        let items = [image]
+        let activity = UIActivityViewController(activityItems: items, applicationActivities: nil)
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            activity.popoverPresentationController?.sourceView = self.overlayView.screenshotView.shareButton
+        }
+
+        self.present(activity, animated: true)
+    }
 }

@@ -42,7 +42,6 @@ class LoadingView: UIView {
         self.backgroundColor = .black
         self.createLabel()
         self.createProgressBar()
-        
     }
     
     /// Create the label

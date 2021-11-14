@@ -16,19 +16,28 @@ class InteractionsManager: InteractionsReader, InteractionsWriter {
     /// Subject for close button taps
     private let closeButtonTapsSubject: PassthroughSubject<(), Never>
     
-    /// Snap button taps publisher
-    var snapButtonTaps: AnyPublisher<(), Never> {
-        return self.snapButtonTapsSubject.share().eraseToAnyPublisher()
-    }
+    /// Subject for share button taps
+    private let shareButtonTapsSubject: PassthroughSubject<(), Never>
     
     /// Snap button taps publisher
-    var closeButtonTaps: AnyPublisher<(), Never> {
+    lazy var snapButtonTaps: AnyPublisher<(), Never> = {
+        return self.snapButtonTapsSubject.share().eraseToAnyPublisher()
+    }()
+    
+    /// Close button taps publisher
+    lazy var closeButtonTaps: AnyPublisher<(), Never> = {
         return self.closeButtonTapsSubject.share().eraseToAnyPublisher()
-    }
+    }()
+    
+    /// Share button taps publisher
+    lazy var shareButtonTaps: AnyPublisher<(), Never> = {
+        return self.shareButtonTapsSubject.share().eraseToAnyPublisher()
+    }()
     
     init() {
         self.snapButtonTapsSubject = PassthroughSubject<(), Never>()
         self.closeButtonTapsSubject = PassthroughSubject<(), Never>()
+        self.shareButtonTapsSubject = PassthroughSubject<(), Never>()
     }
     
     /// Register a snap button tap
@@ -39,5 +48,10 @@ class InteractionsManager: InteractionsReader, InteractionsWriter {
     /// Register a close button tap
     func closeButtonTapped() {
         self.closeButtonTapsSubject.send()
+    }
+    
+    /// Register a close button tap
+    func shareButtonTapped() {
+        self.shareButtonTapsSubject.send()
     }
 }

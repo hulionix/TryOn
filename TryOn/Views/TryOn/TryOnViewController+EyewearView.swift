@@ -29,6 +29,7 @@ extension TryOnViewController: EyewearView {
     func takeSnapshot() {
         let image = self.tryOnView.snapshot()
         self.overlayViewController.overlayView.screenshotView.show(image: image)
+        
     }
     
     func closeImageViewer() {
@@ -38,5 +39,14 @@ extension TryOnViewController: EyewearView {
     /// Hide loading progress view
     func hideProgressView() {
         self.overlayViewController.overlayView.progressView.hide()
+    }
+    
+    /// Share current snapshot image
+    func shareImage() {
+        guard
+            let image = self.overlayViewController.overlayView.screenshotView.imageView.image
+        else { return }
+        
+        self.overlayViewController.presentShareDialogue(image: image)
     }
 }

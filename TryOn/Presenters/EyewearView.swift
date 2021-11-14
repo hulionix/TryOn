@@ -28,4 +28,7 @@ protocol EyewearView: AnyObject {
     
     /// Hide loading progress view
     func hideProgressView()
+    
+    /// Share current snapshot image
+    func shareImage()
 }

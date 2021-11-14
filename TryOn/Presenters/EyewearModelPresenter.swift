@@ -33,6 +33,10 @@ class EyewearModelPresenter: GetEyewearModelOutput {
         self.interactionsReader.closeButtonTaps.sink { [weak self] _ in
             self?.view.closeImageViewer()
         }.store(in: &self.cancelables)
+        
+        self.interactionsReader.shareButtonTaps.sink { [weak self] _ in
+            self?.view.shareImage()
+        }.store(in: &self.cancelables)
     }
     
     /// Called when an eyewear model is ready
