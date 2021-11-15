@@ -11,14 +11,17 @@ import Combine
 /// Protocol representing an object that reads interface interactions
 protocol InteractionsReader {
     
-    /// Subject for snap button taps
+    /// Publisher for snap button taps
     var snapButtonTaps: AnyPublisher<(), Never> { get }
     
-    /// Subject for close button taps
+    /// Publisher for close button taps
     var closeButtonTaps: AnyPublisher<(), Never> { get }
     
-    /// Subject for share button taps
+    /// Publisher for share button taps
     var shareButtonTaps: AnyPublisher<(), Never> { get }
+    
+    /// Publisher for share button taps
+    var tutorialOkTaps: AnyPublisher<(), Never> { get }
 }
 
 /// Protocol representing an object that registers interface interactions
@@ -32,4 +35,7 @@ protocol InteractionsWriter {
     
     /// Register a share button tap
     func shareButtonTapped()
+    
+    /// Register a tutorial ok tap
+    func tutorialOkTapped()
 }

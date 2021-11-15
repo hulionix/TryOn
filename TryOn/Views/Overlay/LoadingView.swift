@@ -40,6 +40,8 @@ class LoadingView: UIView {
         self.layer.cornerRadius = UIConfig.progressViewHeight / 2
         self.isUserInteractionEnabled = false
         self.backgroundColor = .black
+        self.layer.borderWidth = 1
+        self.layer.borderColor = UIColor(white: 0.3, alpha: 0.3).cgColor
         self.createLabel()
         self.createProgressBar()
     }
@@ -60,7 +62,7 @@ class LoadingView: UIView {
     /// Create the progress bars
     private func createProgressBar() {
         self.progressBar = CALayer()
-        progressBar.backgroundColor = UIColor.purple.cgColor
+        progressBar.backgroundColor = UIColor.cyan.cgColor
         self.progressBar.frame = CGRect(x: 0,
                                         y: UIConfig.progressViewHeight/2.0,
                                         width: self.frame.width * progress,

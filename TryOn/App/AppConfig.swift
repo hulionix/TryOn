@@ -13,6 +13,8 @@ class AppConfig {
     static let demoFileName = "Eyewear"
     /// GLTF file name
     static let demoModelName = "square_wood"
+    /// 3D model extension
+    static let modelExtension = ".gltf"
     /// Message for failed network loading
     static let couldNotLoadMessage = "Could not load the requested Eyewear.\n Please check network connectivity."
     /// Message for failed unarchiving

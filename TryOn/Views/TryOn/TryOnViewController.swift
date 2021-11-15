@@ -47,10 +47,6 @@ class TryOnViewController: UIViewController {
         }
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
     /// Set session configuration and load the model
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -61,8 +57,6 @@ class TryOnViewController: UIViewController {
         let configuration = ARFaceTrackingConfiguration()
         configuration.isLightEstimationEnabled = true
         self.tryOnView.session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
-        
-        self.getEyewearModel.get()
     }
 }
 

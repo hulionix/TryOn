@@ -15,7 +15,10 @@ class OverlayView: UIView {
     var screenshotView: ScreenshotView
     
     /// Progress view
-    var progressView = LoadingView()
+    let progressView = LoadingView()
+    
+    /// Tutorial view
+    var tutorialView: TutorialView
     
     /// For registering user interactions
     let interactionsWriter: InteractionsWriter
@@ -23,6 +26,7 @@ class OverlayView: UIView {
     init(interactionsWriter: InteractionsWriter) {
         self.interactionsWriter = interactionsWriter
         self.screenshotView = ScreenshotView(interactionsWriter: self.interactionsWriter)
+        self.tutorialView = TutorialView(interactionsWriter: self.interactionsWriter)
         super.init(frame: UIScreen.main.bounds)
         self.createUI()
     }
@@ -43,6 +47,11 @@ class OverlayView: UIView {
             make.center.equalTo(self.snp.center)
             make.width.equalTo(UIConfig.progressViewWidth)
             make.height.equalTo(UIConfig.progressViewHeight)
+        }
+        
+        self.addSubview(self.tutorialView)
+        self.tutorialView.snp.makeConstraints { make in
+            make.left.right.top.bottom.equalTo(self)
         }
     }
 }

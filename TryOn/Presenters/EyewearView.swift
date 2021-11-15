@@ -31,4 +31,10 @@ protocol EyewearView: AnyObject {
     
     /// Share current snapshot image
     func shareImage()
+    
+    /// Dismiss tutorial
+    func dismissTutorial()
+    
+    /// Request an eyewear model
+    func requestEyewearModel()
 }

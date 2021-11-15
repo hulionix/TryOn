@@ -48,6 +48,8 @@
 		ED15318A27416EE30089945A /* OverlayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED15318927416EE30089945A /* OverlayButton.swift */; };
 		ED15318D27416FFD0089945A /* Interactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED15318C27416FFD0089945A /* Interactions.swift */; };
 		ED1531902741834A0089945A /* InteractionsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED15318F2741834A0089945A /* InteractionsManager.swift */; };
+		ED153192274240C70089945A /* TutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED153191274240C60089945A /* TutorialView.swift */; };
+		ED15319527424FCC0089945A /* EyewearModelPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED15319427424FCC0089945A /* EyewearModelPresenterTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +111,8 @@
 		ED15318927416EE30089945A /* OverlayButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayButton.swift; sourceTree = "<group>"; };
 		ED15318C27416FFD0089945A /* Interactions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactions.swift; sourceTree = "<group>"; };
 		ED15318F2741834A0089945A /* InteractionsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractionsManager.swift; sourceTree = "<group>"; };
+		ED153191274240C60089945A /* TutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialView.swift; sourceTree = "<group>"; };
+		ED15319427424FCC0089945A /* EyewearModelPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyewearModelPresenterTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +149,7 @@
 			children = (
 				ED1530EB273BBAC30089945A /* TryOn */,
 				ED153102273BBAC60089945A /* TryOnTests */,
+				ED153103273BBAC60089945A /* TryOnTests.swift */,
 				ED15310C273BBAC60089945A /* TryOnUITests */,
 				ED1530EA273BBAC30089945A /* Products */,
 			);
@@ -178,7 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				ED15316027403CAE0089945A /* Services */,
-				ED153103273BBAC60089945A /* TryOnTests.swift */,
+				ED15319327424FA60089945A /* Presenters */,
 			);
 			path = TryOnTests;
 			sourceTree = "<group>";
@@ -339,6 +344,7 @@
 				ED153185274133590089945A /* LoadingView.swift */,
 				ED153187274160910089945A /* ScreenshotView.swift */,
 				ED15318927416EE30089945A /* OverlayButton.swift */,
+				ED153191274240C60089945A /* TutorialView.swift */,
 			);
 			path = Overlay;
 			sourceTree = "<group>";
@@ -369,6 +375,14 @@
 				ED15318F2741834A0089945A /* InteractionsManager.swift */,
 			);
 			path = InteractionsManager;
+			sourceTree = "<group>";
+		};
+		ED15319327424FA60089945A /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				ED15319427424FCC0089945A /* EyewearModelPresenterTests.swift */,
+			);
+			path = Presenters;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -541,6 +555,7 @@
 				ED15316827404E630089945A /* EyewearView.swift in Sources */,
 				ED1531902741834A0089945A /* InteractionsManager.swift in Sources */,
 				ED153145273BE6F80089945A /* GetEyewearModel.swift in Sources */,
+				ED153192274240C70089945A /* TutorialView.swift in Sources */,
 				ED15316C274051AE0089945A /* TryOnViewController+EyewearView.swift in Sources */,
 				ED15314C273C37B20089945A /* EyewearModelNetworkRequester.swift in Sources */,
 				ED15315F27400A2A0089945A /* FileManagerAdapter.swift in Sources */,
@@ -551,6 +566,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED15319527424FCC0089945A /* EyewearModelPresenterTests.swift in Sources */,
 				ED15316327403CCD0089945A /* EyewearModelNetworkRequesterTests.swift in Sources */,
 				ED153104273BBAC60089945A /* TryOnTests.swift in Sources */,
 			);

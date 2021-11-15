@@ -37,11 +37,16 @@ class EyewearModelPresenter: GetEyewearModelOutput {
         self.interactionsReader.shareButtonTaps.sink { [weak self] _ in
             self?.view.shareImage()
         }.store(in: &self.cancelables)
+        
+        self.interactionsReader.tutorialOkTaps.sink { [weak self] _ in
+            self?.view.dismissTutorial()
+            self?.view.requestEyewearModel()
+        }.store(in: &self.cancelables)
     }
     
     /// Called when an eyewear model is ready
     func present(eyewearModel: EyewearModel) {
-        let file = eyewearModel.name + ".gltf"
+        let file = eyewearModel.name + AppConfig.modelExtension
         let eyewearURL = eyewearModel.baseURL.appendingPathComponent(file,
                                                                      isDirectory: false)
         let viewModel = EyewearViewModel(url: eyewearURL)

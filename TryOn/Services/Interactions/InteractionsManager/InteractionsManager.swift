@@ -19,6 +19,9 @@ class InteractionsManager: InteractionsReader, InteractionsWriter {
     /// Subject for share button taps
     private let shareButtonTapsSubject: PassthroughSubject<(), Never>
     
+    /// Subject for tutorial ok taps
+    private let tutorialOkTapsSubject: PassthroughSubject<(), Never>
+    
     /// Snap button taps publisher
     lazy var snapButtonTaps: AnyPublisher<(), Never> = {
         return self.snapButtonTapsSubject.share().eraseToAnyPublisher()
@@ -34,10 +37,16 @@ class InteractionsManager: InteractionsReader, InteractionsWriter {
         return self.shareButtonTapsSubject.share().eraseToAnyPublisher()
     }()
     
+    /// Tutorial ok taps publisher
+    lazy var tutorialOkTaps: AnyPublisher<(), Never> = {
+        return self.tutorialOkTapsSubject.share().eraseToAnyPublisher()
+    }()
+    
     init() {
         self.snapButtonTapsSubject = PassthroughSubject<(), Never>()
         self.closeButtonTapsSubject = PassthroughSubject<(), Never>()
         self.shareButtonTapsSubject = PassthroughSubject<(), Never>()
+        self.tutorialOkTapsSubject = PassthroughSubject<(), Never>()
     }
     
     /// Register a snap button tap
@@ -53,5 +62,9 @@ class InteractionsManager: InteractionsReader, InteractionsWriter {
     /// Register a close button tap
     func shareButtonTapped() {
         self.shareButtonTapsSubject.send()
+    }
+    
+    func tutorialOkTapped() {
+        self.tutorialOkTapsSubject.send()
     }
 }

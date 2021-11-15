@@ -8,7 +8,7 @@
 import Foundation
 
 /// Eyewear view model
-struct EyewearViewModel {
+struct EyewearViewModel: Equatable {
     
     /// URL to the file containing the 3d model data
     let url: URL

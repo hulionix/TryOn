@@ -49,4 +49,14 @@ extension TryOnViewController: EyewearView {
         
         self.overlayViewController.presentShareDialogue(image: image)
     }
+    
+    /// Dismiss tutorial
+    func dismissTutorial() {
+        self.overlayViewController.overlayView.tutorialView.hide()
+    }
+    
+    /// Request an eyewear model
+    func requestEyewearModel() {
+        self.getEyewearModel.get()
+    }
 }
