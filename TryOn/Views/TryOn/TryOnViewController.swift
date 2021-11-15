@@ -9,7 +9,7 @@ import UIKit
 import ARKit
 import SnapKit
 
-class TryOnViewController: UIViewController, ARSCNViewDelegate {
+class TryOnViewController: UIViewController {
     
     /// TryOn view
     var tryOnView: TryOnView!

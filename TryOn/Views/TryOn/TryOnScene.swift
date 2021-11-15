@@ -22,6 +22,15 @@ class TryOnScene: SCNScene, ARSCNViewDelegate {
     /// Face occlusion nodes
     var faceMaskNode: SCNNode!
     
+    /// Model scale before scaling starts
+    var userScale: Float = 1
+    
+    /// Model translateZ before positioning starts
+    var userFront: Float = UIConfig.eyewearZShift
+    
+    /// Model translateY before positioning starts
+    var userUp: Float = UIConfig.eyewearYShift
+    
     override init() {
         self.eyewearParentNode = SCNNode()
         super.init()
@@ -105,8 +114,12 @@ class TryOnScene: SCNScene, ARSCNViewDelegate {
         let fMax = face.boundingBox.max
         
         let scale = ((fMax.x - fMin.x) / (eMax.x - eMin.x)) * UIConfig.eyewearScaleFactor
-        eyewear.scale = SCNVector3(scale, scale, scale)
-        eyewear.position.z = fMax.z + UIConfig.eyewearZShift
-        eyewear.position.y += UIConfig.eyewearYShift
+        self.userScale = scale
+        self.userFront = fMax.z + UIConfig.eyewearZShift
+        self.userUp = UIConfig.eyewearYShift
+        
+        eyewear.scale = SCNVector3(userScale, userScale, userScale)
+        eyewear.position.z = self.userFront
+        eyewear.position.y = self.userUp
     }
 }
