@@ -24,10 +24,10 @@ Interactions component makes use of the observable design pattern provided by Co
 
 ### External dependencies are installed via SPM.
 
-- SnapKit for layout of UIKit views
-- Alamofire for networking
-- ZipArchive for extracting downloaded zip model files
-- GLTFSceneKit for loading and parsing a .gltf file into a scenekit node graph
+- SnapKit | for layout of UIKit views.
+- Alamofire | for networking.
+- ZipArchive | for extracting downloaded zip model files.
+- GLTFSceneKit | for loading and parsing a .gltf file into a SceneKit node graph.
 
 ### SPM over CocoaPods or Carthage
 - CocoaPods takes more control over projects than what is needed from a dependency manager, like managing the project workspace.
@@ -39,7 +39,7 @@ Interactions component makes use of the observable design pattern provided by Co
 - AR feature implementation is primitive and using an out of the box ARKit technologies. Eyewear handles can sometimes be seen through eyes holes of the default provided face geometry used for occlusion. Also detection around the edges of the face geometry is bad, spaces can be seen between the frame and face. Solutions can focus on improving face geometry deformation quality so it better fits the face topology.
 - Also maybe a full head mesh, or band like added to the face geometry, including the ears, and fitted on the user's head can give better occlusion when side looking. Something along the lines of 3d Scanning apps that can generate a geometry.
 - Error handling is present up to the point of transforming app level errors into config defined strings in the presenter layer. However no UI is provided for displaying of such error messages.
-- Testing provided is meant to serve as an example and not full coverage. The requesting of a 3d model path is covered along with some of the presentation logic.
+- Testing provided is meant to serve as an example and not full coverage. Requesting a 3d model code path is covered along with some of the presentation logic.
 
 ## Notes on compatibility
 The App requires iOS 13 or later, mainly for the use of Combine framework. Core features can compile back to iOS 11.
