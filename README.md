@@ -42,6 +42,6 @@ Interactions component makes use of the observable design pattern provided by Co
 - Testing provided is meant to serve as an example and not full coverage. Requesting a 3d model code path is covered along with some of the presentation logic.
 
 ## Notes on compatibility
-The App requires iOS 13 or later, mainly for the use of Combine framework. Core features can compile back to iOS 11.
+The App requires iOS 13 or later, mainly for the use of Combine framework. Core features can compile back to iOS 12.
 Minimum hardware requirements for the AR feature is an A12 or later iOS/iPadOS device, including iPhone SE. App has been tested on an iPad pro 2020, and the iPhone UI in simulator.
 
