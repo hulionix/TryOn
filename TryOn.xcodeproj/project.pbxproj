@@ -9,13 +9,48 @@
 /* Begin PBXBuildFile section */
 		ED1530ED273BBAC30089945A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1530EC273BBAC30089945A /* AppDelegate.swift */; };
 		ED1530EF273BBAC30089945A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1530EE273BBAC30089945A /* SceneDelegate.swift */; };
-		ED1530F1273BBAC30089945A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1530F0273BBAC30089945A /* ViewController.swift */; };
-		ED1530F4273BBAC30089945A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED1530F2273BBAC30089945A /* Main.storyboard */; };
+		ED1530F1273BBAC30089945A /* TryOnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1530F0273BBAC30089945A /* TryOnViewController.swift */; };
 		ED1530F6273BBAC60089945A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED1530F5273BBAC60089945A /* Assets.xcassets */; };
 		ED1530F9273BBAC60089945A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED1530F7273BBAC60089945A /* LaunchScreen.storyboard */; };
 		ED153104273BBAC60089945A /* TryOnTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED153103273BBAC60089945A /* TryOnTests.swift */; };
 		ED15310E273BBAC60089945A /* TryOnUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED15310D273BBAC60089945A /* TryOnUITests.swift */; };
 		ED153110273BBAC60089945A /* TryOnUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED15310F273BBAC60089945A /* TryOnUITestsLaunchTests.swift */; };
+		ED15311E273BBB060089945A /* AppAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED15311D273BBB060089945A /* AppAssembler.swift */; };
+		ED153121273BBE670089945A /* TryOnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED153120273BBE670089945A /* TryOnView.swift */; };
+		ED15312D273BDF2B0089945A /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = ED15312C273BDF2B0089945A /* Alamofire */; };
+		ED153130273BDF3D0089945A /* ZipArchive in Frameworks */ = {isa = PBXBuildFile; productRef = ED15312F273BDF3D0089945A /* ZipArchive */; };
+		ED153133273BDF630089945A /* GLTFSceneKit in Frameworks */ = {isa = PBXBuildFile; productRef = ED153132273BDF630089945A /* GLTFSceneKit */; };
+		ED153136273BDFCE0089945A /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED153135273BDFCE0089945A /* Networking.swift */; };
+		ED15313C273BE29E0089945A /* NetworkingConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED15313B273BE29E0089945A /* NetworkingConfig.swift */; };
+		ED153140273BE3490089945A /* AFNetworkAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED15313F273BE3490089945A /* AFNetworkAdapter.swift */; };
+		ED153145273BE6F80089945A /* GetEyewearModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED153144273BE6F80089945A /* GetEyewearModel.swift */; };
+		ED153147273BE71D0089945A /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED153146273BE71D0089945A /* AppConfig.swift */; };
+		ED153149273BE8490089945A /* EyewearModelRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED153148273BE8490089945A /* EyewearModelRequest.swift */; };
+		ED15314C273C37B20089945A /* EyewearModelNetworkRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED15314B273C37B20089945A /* EyewearModelNetworkRequester.swift */; };
+		ED153157273FF2E90089945A /* EyewearModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED153156273FF2E90089945A /* EyewearModel.swift */; };
+		ED153159273FFCA70089945A /* Unarchiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED153158273FFCA70089945A /* Unarchiver.swift */; };
+		ED15315C2740092F0089945A /* ZipArchiveAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED15315B2740092F0089945A /* ZipArchiveAdapter.swift */; };
+		ED15315F27400A2A0089945A /* FileManagerAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED15315E27400A2A0089945A /* FileManagerAdapter.swift */; };
+		ED15316327403CCD0089945A /* EyewearModelNetworkRequesterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED15316227403CCD0089945A /* EyewearModelNetworkRequesterTests.swift */; };
+		ED15316627404E370089945A /* EyewearModelPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED15316527404E370089945A /* EyewearModelPresenter.swift */; };
+		ED15316827404E630089945A /* EyewearView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED15316727404E630089945A /* EyewearView.swift */; };
+		ED15316A27404EE90089945A /* GetEyewearModelOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED15316927404EE90089945A /* GetEyewearModelOutput.swift */; };
+		ED15316C274051AE0089945A /* TryOnViewController+EyewearView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED15316B274051AE0089945A /* TryOnViewController+EyewearView.swift */; };
+		ED15317027406C210089945A /* TryOnScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED15316F27406C210089945A /* TryOnScene.swift */; };
+		ED1531722740921F0089945A /* EyewearViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1531712740921F0089945A /* EyewearViewModel.swift */; };
+		ED1531742740B4060089945A /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1531732740B4060089945A /* File.swift */; };
+		ED1531782740BA250089945A /* UIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1531772740BA250089945A /* UIConfig.swift */; };
+		ED15317D274129840089945A /* OverlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED15317C274129840089945A /* OverlayViewController.swift */; };
+		ED15318027412ABC0089945A /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = ED15317F27412ABC0089945A /* SnapKit */; };
+		ED153183274131850089945A /* OverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED153182274131850089945A /* OverlayView.swift */; };
+		ED153186274133590089945A /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED153185274133590089945A /* LoadingView.swift */; };
+		ED153188274160910089945A /* ScreenshotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED153187274160910089945A /* ScreenshotView.swift */; };
+		ED15318A27416EE30089945A /* OverlayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED15318927416EE30089945A /* OverlayButton.swift */; };
+		ED15318D27416FFD0089945A /* Interactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED15318C27416FFD0089945A /* Interactions.swift */; };
+		ED1531902741834A0089945A /* InteractionsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED15318F2741834A0089945A /* InteractionsManager.swift */; };
+		ED153192274240C70089945A /* TutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED153191274240C60089945A /* TutorialView.swift */; };
+		ED15319527424FCC0089945A /* EyewearModelPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED15319427424FCC0089945A /* EyewearModelPresenterTests.swift */; };
+		ED153197274296F60089945A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = ED153196274296F60089945A /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +74,7 @@
 		ED1530E9273BBAC30089945A /* TryOn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TryOn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED1530EC273BBAC30089945A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED1530EE273BBAC30089945A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		ED1530F0273BBAC30089945A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		ED1530F3273BBAC30089945A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		ED1530F0273BBAC30089945A /* TryOnViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TryOnViewController.swift; sourceTree = "<group>"; };
 		ED1530F5273BBAC60089945A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED1530F8273BBAC60089945A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED1530FA273BBAC60089945A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +83,38 @@
 		ED153109273BBAC60089945A /* TryOnUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TryOnUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED15310D273BBAC60089945A /* TryOnUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TryOnUITests.swift; sourceTree = "<group>"; };
 		ED15310F273BBAC60089945A /* TryOnUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TryOnUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		ED15311D273BBB060089945A /* AppAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAssembler.swift; sourceTree = "<group>"; };
+		ED153120273BBE670089945A /* TryOnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TryOnView.swift; sourceTree = "<group>"; };
+		ED153135273BDFCE0089945A /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		ED15313B273BE29E0089945A /* NetworkingConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingConfig.swift; sourceTree = "<group>"; };
+		ED15313F273BE3490089945A /* AFNetworkAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AFNetworkAdapter.swift; sourceTree = "<group>"; };
+		ED153144273BE6F80089945A /* GetEyewearModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetEyewearModel.swift; sourceTree = "<group>"; };
+		ED153146273BE71D0089945A /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
+		ED153148273BE8490089945A /* EyewearModelRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyewearModelRequest.swift; sourceTree = "<group>"; };
+		ED15314B273C37B20089945A /* EyewearModelNetworkRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyewearModelNetworkRequester.swift; sourceTree = "<group>"; };
+		ED153156273FF2E90089945A /* EyewearModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyewearModel.swift; sourceTree = "<group>"; };
+		ED153158273FFCA70089945A /* Unarchiver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unarchiver.swift; sourceTree = "<group>"; };
+		ED15315B2740092F0089945A /* ZipArchiveAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZipArchiveAdapter.swift; sourceTree = "<group>"; };
+		ED15315E27400A2A0089945A /* FileManagerAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerAdapter.swift; sourceTree = "<group>"; };
+		ED15316227403CCD0089945A /* EyewearModelNetworkRequesterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyewearModelNetworkRequesterTests.swift; sourceTree = "<group>"; };
+		ED15316527404E370089945A /* EyewearModelPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyewearModelPresenter.swift; sourceTree = "<group>"; };
+		ED15316727404E630089945A /* EyewearView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyewearView.swift; sourceTree = "<group>"; };
+		ED15316927404EE90089945A /* GetEyewearModelOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetEyewearModelOutput.swift; sourceTree = "<group>"; };
+		ED15316B274051AE0089945A /* TryOnViewController+EyewearView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TryOnViewController+EyewearView.swift"; sourceTree = "<group>"; };
+		ED15316F27406C210089945A /* TryOnScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TryOnScene.swift; sourceTree = "<group>"; };
+		ED1531712740921F0089945A /* EyewearViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyewearViewModel.swift; sourceTree = "<group>"; };
+		ED1531732740B4060089945A /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		ED1531772740BA250089945A /* UIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIConfig.swift; sourceTree = "<group>"; };
+		ED15317C274129840089945A /* OverlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayViewController.swift; sourceTree = "<group>"; };
+		ED153182274131850089945A /* OverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayView.swift; sourceTree = "<group>"; };
+		ED153185274133590089945A /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		ED153187274160910089945A /* ScreenshotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotView.swift; sourceTree = "<group>"; };
+		ED15318927416EE30089945A /* OverlayButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayButton.swift; sourceTree = "<group>"; };
+		ED15318C27416FFD0089945A /* Interactions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactions.swift; sourceTree = "<group>"; };
+		ED15318F2741834A0089945A /* InteractionsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractionsManager.swift; sourceTree = "<group>"; };
+		ED153191274240C60089945A /* TutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialView.swift; sourceTree = "<group>"; };
+		ED15319427424FCC0089945A /* EyewearModelPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyewearModelPresenterTests.swift; sourceTree = "<group>"; };
+		ED153196274296F60089945A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.markdown; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +122,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED153133273BDF630089945A /* GLTFSceneKit in Frameworks */,
+				ED15318027412ABC0089945A /* SnapKit in Frameworks */,
+				ED15312D273BDF2B0089945A /* Alamofire in Frameworks */,
+				ED153130273BDF3D0089945A /* ZipArchive in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,8 +149,10 @@
 		ED1530E0273BBAC30089945A = {
 			isa = PBXGroup;
 			children = (
+				ED153196274296F60089945A /* README.md */,
 				ED1530EB273BBAC30089945A /* TryOn */,
 				ED153102273BBAC60089945A /* TryOnTests */,
+				ED153103273BBAC60089945A /* TryOnTests.swift */,
 				ED15310C273BBAC60089945A /* TryOnUITests */,
 				ED1530EA273BBAC30089945A /* Products */,
 			);
@@ -99,13 +171,13 @@
 		ED1530EB273BBAC30089945A /* TryOn */ = {
 			isa = PBXGroup;
 			children = (
-				ED1530EC273BBAC30089945A /* AppDelegate.swift */,
-				ED1530EE273BBAC30089945A /* SceneDelegate.swift */,
-				ED1530F0273BBAC30089945A /* ViewController.swift */,
-				ED1530F2273BBAC30089945A /* Main.storyboard */,
-				ED1530F5273BBAC60089945A /* Assets.xcassets */,
-				ED1530F7273BBAC60089945A /* LaunchScreen.storyboard */,
 				ED1530FA273BBAC60089945A /* Info.plist */,
+				ED15311C273BBAF70089945A /* App */,
+				ED15313D273BE3100089945A /* Services */,
+				ED153155273FF2D50089945A /* Models */,
+				ED153142273BE6B00089945A /* Business */,
+				ED15316427404E150089945A /* Presenters */,
+				ED15311F273BBE1E0089945A /* Views */,
 			);
 			path = TryOn;
 			sourceTree = "<group>";
@@ -113,7 +185,8 @@
 		ED153102273BBAC60089945A /* TryOnTests */ = {
 			isa = PBXGroup;
 			children = (
-				ED153103273BBAC60089945A /* TryOnTests.swift */,
+				ED15316027403CAE0089945A /* Services */,
+				ED15319327424FA60089945A /* Presenters */,
 			);
 			path = TryOnTests;
 			sourceTree = "<group>";
@@ -125,6 +198,194 @@
 				ED15310F273BBAC60089945A /* TryOnUITestsLaunchTests.swift */,
 			);
 			path = TryOnUITests;
+			sourceTree = "<group>";
+		};
+		ED15311C273BBAF70089945A /* App */ = {
+			isa = PBXGroup;
+			children = (
+				ED1530F7273BBAC60089945A /* LaunchScreen.storyboard */,
+				ED1530F5273BBAC60089945A /* Assets.xcassets */,
+				ED1530EE273BBAC30089945A /* SceneDelegate.swift */,
+				ED1530EC273BBAC30089945A /* AppDelegate.swift */,
+				ED15311D273BBB060089945A /* AppAssembler.swift */,
+				ED153146273BE71D0089945A /* AppConfig.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		ED15311F273BBE1E0089945A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				ED1531772740BA250089945A /* UIConfig.swift */,
+				ED153179274128550089945A /* TryOn */,
+				ED1531762740B7140089945A /* Overlay */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		ED153134273BDFAE0089945A /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				ED15313B273BE29E0089945A /* NetworkingConfig.swift */,
+				ED153135273BDFCE0089945A /* Networking.swift */,
+				ED15314B273C37B20089945A /* EyewearModelNetworkRequester.swift */,
+				ED15313E273BE3310089945A /* AFNetworking */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		ED15313D273BE3100089945A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				ED153151273D7BAF0089945A /* File */,
+				ED1531752740B4740089945A /* Unarchiver */,
+				ED153134273BDFAE0089945A /* Networking */,
+				ED15318B27416FEC0089945A /* Interactions */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		ED15313E273BE3310089945A /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				ED15313F273BE3490089945A /* AFNetworkAdapter.swift */,
+			);
+			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+		ED153141273BE6930089945A /* GetEyewearModel */ = {
+			isa = PBXGroup;
+			children = (
+				ED153144273BE6F80089945A /* GetEyewearModel.swift */,
+				ED153148273BE8490089945A /* EyewearModelRequest.swift */,
+				ED15316927404EE90089945A /* GetEyewearModelOutput.swift */,
+			);
+			path = GetEyewearModel;
+			sourceTree = "<group>";
+		};
+		ED153142273BE6B00089945A /* Business */ = {
+			isa = PBXGroup;
+			children = (
+				ED153141273BE6930089945A /* GetEyewearModel */,
+			);
+			path = Business;
+			sourceTree = "<group>";
+		};
+		ED153151273D7BAF0089945A /* File */ = {
+			isa = PBXGroup;
+			children = (
+				ED1531732740B4060089945A /* File.swift */,
+				ED15315D27400A1F0089945A /* FileManager */,
+			);
+			path = File;
+			sourceTree = "<group>";
+		};
+		ED153155273FF2D50089945A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				ED153156273FF2E90089945A /* EyewearModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		ED15315A274009250089945A /* ZipArchive */ = {
+			isa = PBXGroup;
+			children = (
+				ED15315B2740092F0089945A /* ZipArchiveAdapter.swift */,
+			);
+			path = ZipArchive;
+			sourceTree = "<group>";
+		};
+		ED15315D27400A1F0089945A /* FileManager */ = {
+			isa = PBXGroup;
+			children = (
+				ED15315E27400A2A0089945A /* FileManagerAdapter.swift */,
+			);
+			path = FileManager;
+			sourceTree = "<group>";
+		};
+		ED15316027403CAE0089945A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				ED15316127403CB40089945A /* Networking */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		ED15316127403CB40089945A /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				ED15316227403CCD0089945A /* EyewearModelNetworkRequesterTests.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		ED15316427404E150089945A /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				ED15316527404E370089945A /* EyewearModelPresenter.swift */,
+				ED15316727404E630089945A /* EyewearView.swift */,
+				ED1531712740921F0089945A /* EyewearViewModel.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		ED1531752740B4740089945A /* Unarchiver */ = {
+			isa = PBXGroup;
+			children = (
+				ED153158273FFCA70089945A /* Unarchiver.swift */,
+				ED15315A274009250089945A /* ZipArchive */,
+			);
+			path = Unarchiver;
+			sourceTree = "<group>";
+		};
+		ED1531762740B7140089945A /* Overlay */ = {
+			isa = PBXGroup;
+			children = (
+				ED15317C274129840089945A /* OverlayViewController.swift */,
+				ED153182274131850089945A /* OverlayView.swift */,
+				ED153185274133590089945A /* LoadingView.swift */,
+				ED153187274160910089945A /* ScreenshotView.swift */,
+				ED15318927416EE30089945A /* OverlayButton.swift */,
+				ED153191274240C60089945A /* TutorialView.swift */,
+			);
+			path = Overlay;
+			sourceTree = "<group>";
+		};
+		ED153179274128550089945A /* TryOn */ = {
+			isa = PBXGroup;
+			children = (
+				ED1530F0273BBAC30089945A /* TryOnViewController.swift */,
+				ED15316B274051AE0089945A /* TryOnViewController+EyewearView.swift */,
+				ED153120273BBE670089945A /* TryOnView.swift */,
+				ED15316F27406C210089945A /* TryOnScene.swift */,
+			);
+			path = TryOn;
+			sourceTree = "<group>";
+		};
+		ED15318B27416FEC0089945A /* Interactions */ = {
+			isa = PBXGroup;
+			children = (
+				ED15318C27416FFD0089945A /* Interactions.swift */,
+				ED15318E274183230089945A /* InteractionsManager */,
+			);
+			path = Interactions;
+			sourceTree = "<group>";
+		};
+		ED15318E274183230089945A /* InteractionsManager */ = {
+			isa = PBXGroup;
+			children = (
+				ED15318F2741834A0089945A /* InteractionsManager.swift */,
+			);
+			path = InteractionsManager;
+			sourceTree = "<group>";
+		};
+		ED15319327424FA60089945A /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				ED15319427424FCC0089945A /* EyewearModelPresenterTests.swift */,
+			);
+			path = Presenters;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,6 +404,12 @@
 			dependencies = (
 			);
 			name = TryOn;
+			packageProductDependencies = (
+				ED15312C273BDF2B0089945A /* Alamofire */,
+				ED15312F273BDF3D0089945A /* ZipArchive */,
+				ED153132273BDF630089945A /* GLTFSceneKit */,
+				ED15317F27412ABC0089945A /* SnapKit */,
+			);
 			productName = TryOn;
 			productReference = ED1530E9273BBAC30089945A /* TryOn.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +482,12 @@
 				Base,
 			);
 			mainGroup = ED1530E0273BBAC30089945A;
+			packageReferences = (
+				ED15312B273BDF2B0089945A /* XCRemoteSwiftPackageReference "Alamofire" */,
+				ED15312E273BDF3D0089945A /* XCRemoteSwiftPackageReference "ZipArchive" */,
+				ED153131273BDF630089945A /* XCRemoteSwiftPackageReference "GLTFSceneKit" */,
+				ED15317E27412ABC0089945A /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = ED1530EA273BBAC30089945A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -233,7 +506,6 @@
 			files = (
 				ED1530F9273BBAC60089945A /* LaunchScreen.storyboard in Resources */,
 				ED1530F6273BBAC60089945A /* Assets.xcassets in Resources */,
-				ED1530F4273BBAC30089945A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,6 +513,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED153197274296F60089945A /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +531,38 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ED1530F1273BBAC30089945A /* ViewController.swift in Sources */,
+				ED15318D27416FFD0089945A /* Interactions.swift in Sources */,
+				ED1531742740B4060089945A /* File.swift in Sources */,
+				ED15311E273BBB060089945A /* AppAssembler.swift in Sources */,
+				ED153147273BE71D0089945A /* AppConfig.swift in Sources */,
+				ED153121273BBE670089945A /* TryOnView.swift in Sources */,
+				ED153136273BDFCE0089945A /* Networking.swift in Sources */,
+				ED153186274133590089945A /* LoadingView.swift in Sources */,
+				ED153159273FFCA70089945A /* Unarchiver.swift in Sources */,
+				ED15316627404E370089945A /* EyewearModelPresenter.swift in Sources */,
+				ED15313C273BE29E0089945A /* NetworkingConfig.swift in Sources */,
+				ED1530F1273BBAC30089945A /* TryOnViewController.swift in Sources */,
+				ED15317D274129840089945A /* OverlayViewController.swift in Sources */,
 				ED1530ED273BBAC30089945A /* AppDelegate.swift in Sources */,
+				ED15318A27416EE30089945A /* OverlayButton.swift in Sources */,
+				ED15315C2740092F0089945A /* ZipArchiveAdapter.swift in Sources */,
+				ED1531782740BA250089945A /* UIConfig.swift in Sources */,
+				ED1531722740921F0089945A /* EyewearViewModel.swift in Sources */,
 				ED1530EF273BBAC30089945A /* SceneDelegate.swift in Sources */,
+				ED153149273BE8490089945A /* EyewearModelRequest.swift in Sources */,
+				ED153140273BE3490089945A /* AFNetworkAdapter.swift in Sources */,
+				ED15317027406C210089945A /* TryOnScene.swift in Sources */,
+				ED153188274160910089945A /* ScreenshotView.swift in Sources */,
+				ED153183274131850089945A /* OverlayView.swift in Sources */,
+				ED153157273FF2E90089945A /* EyewearModel.swift in Sources */,
+				ED15316A27404EE90089945A /* GetEyewearModelOutput.swift in Sources */,
+				ED15316827404E630089945A /* EyewearView.swift in Sources */,
+				ED1531902741834A0089945A /* InteractionsManager.swift in Sources */,
+				ED153145273BE6F80089945A /* GetEyewearModel.swift in Sources */,
+				ED153192274240C70089945A /* TutorialView.swift in Sources */,
+				ED15316C274051AE0089945A /* TryOnViewController+EyewearView.swift in Sources */,
+				ED15314C273C37B20089945A /* EyewearModelNetworkRequester.swift in Sources */,
+				ED15315F27400A2A0089945A /* FileManagerAdapter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,6 +570,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED15319527424FCC0089945A /* EyewearModelPresenterTests.swift in Sources */,
+				ED15316327403CCD0089945A /* EyewearModelNetworkRequesterTests.swift in Sources */,
 				ED153104273BBAC60089945A /* TryOnTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,14 +601,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		ED1530F2273BBAC30089945A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				ED1530F3273BBAC30089945A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		ED1530F7273BBAC60089945A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -367,7 +663,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -422,7 +718,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -444,7 +740,6 @@
 				INFOPLIST_FILE = TryOn/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -472,7 +767,6 @@
 				INFOPLIST_FILE = TryOn/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -624,6 +918,64 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		ED15312B273BDF2B0089945A /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		ED15312E273BDF3D0089945A /* XCRemoteSwiftPackageReference "ZipArchive" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ZipArchive/ZipArchive.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		ED153131273BDF630089945A /* XCRemoteSwiftPackageReference "GLTFSceneKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/magicien/GLTFSceneKit";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		ED15317E27412ABC0089945A /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		ED15312C273BDF2B0089945A /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ED15312B273BDF2B0089945A /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		ED15312F273BDF3D0089945A /* ZipArchive */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ED15312E273BDF3D0089945A /* XCRemoteSwiftPackageReference "ZipArchive" */;
+			productName = ZipArchive;
+		};
+		ED153132273BDF630089945A /* GLTFSceneKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ED153131273BDF630089945A /* XCRemoteSwiftPackageReference "GLTFSceneKit" */;
+			productName = GLTFSceneKit;
+		};
+		ED15317F27412ABC0089945A /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ED15317E27412ABC0089945A /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = ED1530E1273BBAC30089945A /* Project object */;
 }
